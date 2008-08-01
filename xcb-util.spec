@@ -119,15 +119,70 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NEWS README
-%attr(755,root,root) %{_libdir}/libxcb-*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libxcb-atom.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-atom.so.0
+%attr(755,root,root) %{_libdir}/libxcb-aux.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-aux.so.0
+%attr(755,root,root) %{_libdir}/libxcb-event.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-event.so.0
+%attr(755,root,root) %{_libdir}/libxcb-icccm.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-icccm.so.0
+%attr(755,root,root) %{_libdir}/libxcb-image.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-image.so.0
+%attr(755,root,root) %{_libdir}/libxcb-keysyms.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-keysyms.so.0
+%attr(755,root,root) %{_libdir}/libxcb-property.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-property.so.0
+%attr(755,root,root) %{_libdir}/libxcb-render-util.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-render-util.so.0
+%attr(755,root,root) %{_libdir}/libxcb-reply.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-reply.so.0
+%attr(755,root,root) %{_libdir}/libxcb-wm.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcb-wm.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libxcb-*.so
-%{_libdir}/libxcb-*.la
+%attr(755,root,root) %{_libdir}/libxcb-atom.so
+%attr(755,root,root) %{_libdir}/libxcb-aux.so
+%attr(755,root,root) %{_libdir}/libxcb-event.so
+%attr(755,root,root) %{_libdir}/libxcb-icccm.so
+%attr(755,root,root) %{_libdir}/libxcb-image.so
+%attr(755,root,root) %{_libdir}/libxcb-keysyms.so
+%attr(755,root,root) %{_libdir}/libxcb-property.so
+%attr(755,root,root) %{_libdir}/libxcb-render-util.so
+%attr(755,root,root) %{_libdir}/libxcb-reply.so
+%attr(755,root,root) %{_libdir}/libxcb-wm.so
+%{_libdir}/libxcb-atom.la
+%{_libdir}/libxcb-aux.la
+%{_libdir}/libxcb-event.la
+%{_libdir}/libxcb-icccm.la
+%{_libdir}/libxcb-image.la
+%{_libdir}/libxcb-keysyms.la
+%{_libdir}/libxcb-property.la
+%{_libdir}/libxcb-render-util.la
+%{_libdir}/libxcb-reply.la
+%{_libdir}/libxcb-wm.la
 %{_includedir}/xcb/xcb_*.h
-%{_pkgconfigdir}/xcb-*.pc
+%{_pkgconfigdir}/xcb-atom.pc
+%{_pkgconfigdir}/xcb-aux.pc
+%{_pkgconfigdir}/xcb-event.pc
+%{_pkgconfigdir}/xcb-icccm.pc
+%{_pkgconfigdir}/xcb-image.pc
+%{_pkgconfigdir}/xcb-keysyms.pc
+%{_pkgconfigdir}/xcb-property.pc
+%{_pkgconfigdir}/xcb-renderutil.pc
+%{_pkgconfigdir}/xcb-reply.pc
+%{_pkgconfigdir}/xcb-wm.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libxcb-*.a
+%{_libdir}/libxcb-atom.a
+%{_libdir}/libxcb-aux.a
+%{_libdir}/libxcb-event.a
+%{_libdir}/libxcb-icccm.a
+%{_libdir}/libxcb-image.a
+%{_libdir}/libxcb-keysyms.a
+%{_libdir}/libxcb-property.a
+%{_libdir}/libxcb-render-util.a
+%{_libdir}/libxcb-reply.a
+%{_libdir}/libxcb-wm.a
