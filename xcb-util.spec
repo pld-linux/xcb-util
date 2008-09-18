@@ -1,12 +1,12 @@
 Summary:	XCB support libraries
 Summary(pl.UTF-8):	Biblioteki wspomagające XCB
 Name:		xcb-util
-Version:	0.2.1
+Version:	0.3.0
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
-# Source0-md5:	c239cd9b3e7e70c564a78d115eab35fb
+# Source0-md5:	5f2188492a7d12142d83f73cf0054c59
 URL:		http://xcb.freedesktop.org/
 BuildRequires:	gperf
 BuildRequires:	libxcb-devel >= 1.0
@@ -118,25 +118,25 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS README
+%doc README
 %attr(755,root,root) %{_libdir}/libxcb-atom.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-atom.so.0
+%attr(755,root,root) %ghost %{_libdir}/libxcb-atom.so.1
 %attr(755,root,root) %{_libdir}/libxcb-aux.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-aux.so.0
 %attr(755,root,root) %{_libdir}/libxcb-event.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-event.so.0
+%attr(755,root,root) %ghost %{_libdir}/libxcb-event.so.1
 %attr(755,root,root) %{_libdir}/libxcb-icccm.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-icccm.so.0
+%attr(755,root,root) %ghost %{_libdir}/libxcb-icccm.so.1
 %attr(755,root,root) %{_libdir}/libxcb-image.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-image.so.0
 %attr(755,root,root) %{_libdir}/libxcb-keysyms.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-keysyms.so.0
 %attr(755,root,root) %{_libdir}/libxcb-property.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-property.so.0
+%attr(755,root,root) %ghost %{_libdir}/libxcb-property.so.1
 %attr(755,root,root) %{_libdir}/libxcb-render-util.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-render-util.so.0
 %attr(755,root,root) %{_libdir}/libxcb-reply.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-reply.so.0
+%attr(755,root,root) %ghost %{_libdir}/libxcb-reply.so.1
 %attr(755,root,root) %{_libdir}/libxcb-wm.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-wm.so.0
 
