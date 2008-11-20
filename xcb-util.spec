@@ -1,12 +1,12 @@
 Summary:	XCB support libraries
 Summary(pl.UTF-8):	Biblioteki wspomagające XCB
 Name:		xcb-util
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
-# Source0-md5:	5f2188492a7d12142d83f73cf0054c59
+# Source0-md5:	4b06006e438c3926d077439b31d290d6
 URL:		http://xcb.freedesktop.org/
 BuildRequires:	gperf
 BuildRequires:	libxcb-devel >= 1.0
