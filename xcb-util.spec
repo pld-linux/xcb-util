@@ -1,12 +1,12 @@
 Summary:	XCB support libraries
 Summary(pl.UTF-8):	Biblioteki wspomagające XCB
 Name:		xcb-util
-Version:	0.3.3
+Version:	0.3.4
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
-# Source0-md5:	b1b16c5c1fcf7a6facb346c262cd3513
+# Source0-md5:	015314fe5e97d9390024275c6a3699a4
 URL:		http://xcb.freedesktop.org/
 BuildRequires:	gperf
 BuildRequires:	libxcb-devel >= 1.0
@@ -39,8 +39,6 @@ event: Callback X event handling.
 
 image: Port of Xlib's XImage and XShmImage functions.
 
-wm: Framework for window manager implementation.
-
 %description -l pl.UTF-8
 xcb-util udostępnia wiele bibliotek opartych powyżej libxcb (głównej
 biblioteki protokołu X) oraz trochę bibliotek rozszerzeń. Te
@@ -67,8 +65,6 @@ keysyms: standardowe stałe i konwersje klawiszy X z/do kodów klawiszy.
 event: obsługa wywołań zwrotnych dla zdarzeń X.
 
 image: port funkcji XImage i XShmImage z Xlib.
-
-wm: szkielet dla implementacji zarządców okien.
 
 %package devel
 Summary:	Header files for XCB util libraries
@@ -130,15 +126,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libxcb-image.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-image.so.0
 %attr(755,root,root) %{_libdir}/libxcb-keysyms.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-keysyms.so.0
+%attr(755,root,root) %ghost %{_libdir}/libxcb-keysyms.so.1
 %attr(755,root,root) %{_libdir}/libxcb-property.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-property.so.1
 %attr(755,root,root) %{_libdir}/libxcb-render-util.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-render-util.so.0
 %attr(755,root,root) %{_libdir}/libxcb-reply.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-reply.so.1
-%attr(755,root,root) %{_libdir}/libxcb-wm.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-wm.so.0
 
 %files devel
 %defattr(644,root,root,755)
@@ -151,7 +145,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libxcb-property.so
 %attr(755,root,root) %{_libdir}/libxcb-render-util.so
 %attr(755,root,root) %{_libdir}/libxcb-reply.so
-%attr(755,root,root) %{_libdir}/libxcb-wm.so
 %{_libdir}/libxcb-atom.la
 %{_libdir}/libxcb-aux.la
 %{_libdir}/libxcb-event.la
@@ -161,7 +154,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libxcb-property.la
 %{_libdir}/libxcb-render-util.la
 %{_libdir}/libxcb-reply.la
-%{_libdir}/libxcb-wm.la
 %{_includedir}/xcb/xcb_*.h
 %{_pkgconfigdir}/xcb-atom.pc
 %{_pkgconfigdir}/xcb-aux.pc
@@ -172,7 +164,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/xcb-property.pc
 %{_pkgconfigdir}/xcb-renderutil.pc
 %{_pkgconfigdir}/xcb-reply.pc
-%{_pkgconfigdir}/xcb-wm.pc
 
 %files static
 %defattr(644,root,root,755)
@@ -185,4 +176,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libxcb-property.a
 %{_libdir}/libxcb-render-util.a
 %{_libdir}/libxcb-reply.a
-%{_libdir}/libxcb-wm.a
