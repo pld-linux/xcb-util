@@ -10,6 +10,7 @@ Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 URL:		http://xcb.freedesktop.org/
 BuildRequires:	gperf
 BuildRequires:	libxcb-devel >= 1.4
+BuildRequires:	m4
 BuildRequires:	pkgconfig
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
