@@ -7,7 +7,7 @@ License:	MIT
 Group:		Libraries
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 # Source0-md5:	8ce019c4bbf20dce246b98f177cfccff
-URL:		http://xcb.freedesktop.org/
+URL:		http://xcb.freedesktop.org/XcbUtil/
 BuildRequires:	gperf
 BuildRequires:	libxcb-devel >= 1.4
 BuildRequires:	m4
