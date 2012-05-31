@@ -1,16 +1,14 @@
 Summary:	XCB support library
 Summary(pl.UTF-8):	Biblioteka wspomagająca XCB
 Name:		xcb-util
-Version:	0.3.8
+Version:	0.3.9
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
-# Source0-md5:	8ce019c4bbf20dce246b98f177cfccff
+# Source0-md5:	01dcc7a16d5020530552712710646ea2
 URL:		http://xcb.freedesktop.org/XcbUtil/
-BuildRequires:	gperf
 BuildRequires:	libxcb-devel >= 1.4
-BuildRequires:	m4
 BuildRequires:	pkgconfig
 BuildRequires:	xcb-proto >= 1.6
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.8
@@ -91,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/libxcb-util.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxcb-util.so.0
+%attr(755,root,root) %ghost %{_libdir}/libxcb-util.so.1
 
 %files devel
 %defattr(644,root,root,755)
@@ -99,7 +97,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libxcb-util.la
 %{_includedir}/xcb/xcb_atom.h
 %{_includedir}/xcb/xcb_aux.h
-%{_includedir}/xcb/xcb_bitops.h
 %{_includedir}/xcb/xcb_event.h
 %{_includedir}/xcb/xcb_util.h
 %{_pkgconfigdir}/xcb-atom.pc
