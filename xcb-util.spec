@@ -1,16 +1,18 @@
 Summary:	XCB support library
 Summary(pl.UTF-8):	Biblioteka wspomagająca XCB
 Name:		xcb-util
-Version:	0.4.0
-Release:	2
+Version:	0.4.1
+Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
-# Source0-md5:	2e97feed81919465a04ccc71e4073313
-URL:		http://xcb.freedesktop.org/XcbUtil/
+Source0:	https://xcb.freedesktop.org/dist/%{name}-%{version}.tar.xz
+# Source0-md5:	34d749eab0fd0ffd519ac64798d79847
+URL:		https://xcb.freedesktop.org/XcbUtil/
 BuildRequires:	libxcb-devel >= 1.4
 BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xcb-proto >= 1.6
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -86,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS README
+%doc ChangeLog NEWS README.md
 %attr(755,root,root) %{_libdir}/libxcb-util.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxcb-util.so.1
 
